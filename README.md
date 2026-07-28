@@ -65,12 +65,6 @@ src/
 
 ---
 
-## 📸 Preview
-
-(Add screenshots after deployment)
-
----
-
 ## 🚀 Running Locally
 
 Clone the repository
