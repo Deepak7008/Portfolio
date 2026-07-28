@@ -1,0 +1,85 @@
+.aurora-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Mouse tracking spotlight following cursor directly */
+.mouse-spotlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  transition: background 0.05s ease-out;
+}
+
+/* Background texture noise */
+.aurora-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.08), transparent 70%);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(65px);
+  will-change: transform;
+  transition: transform 0.25s cubic-bezier(0.1, 0.9, 0.2, 1);
+  z-index: 0;
+}
+
+/* Individual Blobs with varied positions & colors */
+.blob-1 {
+  width: 50vw;
+  height: 50vw;
+  max-width: 650px;
+  max-height: 650px;
+  top: -15%;
+  left: -10%;
+  background: var(--aurora-blob-1);
+}
+
+.blob-2 {
+  width: 45vw;
+  height: 45vw;
+  max-width: 600px;
+  max-height: 600px;
+  top: 15%;
+  right: -10%;
+  background: var(--aurora-blob-2);
+}
+
+.blob-3 {
+  width: 40vw;
+  height: 40vw;
+  max-width: 520px;
+  max-height: 520px;
+  bottom: -15%;
+  left: 15%;
+  background: var(--aurora-blob-3);
+}
+
+.blob-4 {
+  width: 35vw;
+  height: 35vw;
+  max-width: 450px;
+  max-height: 450px;
+  bottom: 20%;
+  right: 10%;
+  background: var(--aurora-blob-4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-blob {
+    transition: none;
+    transform: none !important;
+  }
+}

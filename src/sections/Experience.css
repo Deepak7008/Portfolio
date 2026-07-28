@@ -1,0 +1,167 @@
+.experience-card {
+  padding: var(--space-8);
+  border-radius: var(--glass-card-border-radius);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: all .3s ease;
+  margin-bottom: var(--space-4);
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-blue);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+  gap: 2rem;
+}
+
+.experience-header-left {
+  flex: 1;
+}
+
+.experience-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .45rem;
+  gap: 1rem;
+}
+
+.experience-scroll {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.exp-company {
+  color: var(--text-muted);
+  font-size: .95rem;
+  font-weight: 500;
+}
+
+.exp-duration {
+  color: var(--text-secondary);
+  font-size: .95rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.exp-role {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.expand-icon {
+  margin-top: .35rem;
+  color: var(--text-muted);
+  transition: .3s;
+}
+
+.expand-icon.open {
+  transform: rotate(180deg);
+  color: var(--accent-blue);
+}
+
+.experience-content {
+  margin-top: 2rem;
+  animation: fadeSlide .35s ease;
+}
+
+.tech-title {
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: .08em;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-bottom: 2rem;
+}
+
+.tech-pill {
+  padding: .45rem .9rem;
+  border-radius: 999px;
+  background: var(--bg-pill);
+  border: 1px solid var(--border-color);
+  font-size: .85rem;
+  transition: .25s;
+}
+
+.tech-pill:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.exp-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.exp-bullets li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.exp-bullets li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  position: absolute;
+  left: 0;
+  top: .75rem;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width:768px) {
+
+  .experience-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .experience-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .exp-role {
+    font-size: 1.45rem;
+  }
+
+  .expand-icon {
+    align-self: flex-end;
+    margin-top: -2.5rem;
+  }
+
+}

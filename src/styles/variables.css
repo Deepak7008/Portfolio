@@ -1,0 +1,152 @@
+:root {
+  /* Font Families */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-heading: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Layout Variables - Spacing System */
+  --navbar-height: 64px;
+  --section-nav-height: 60px;
+  --section-top-spacing: 56px;      /* Navbar to section header */
+  --section-header-spacing: 32px;   /* Section header to content */
+  --section-bottom-spacing: 32px;   /* Content to bottom nav area */
+  --modal-vertical-padding: 48px;   /* Equal top/bottom padding for modals */
+  --viewport-available-height: calc(100vh - var(--navbar-height) - var(--section-nav-height));
+  --container-max-width: 1200px;
+  --container-padding: 1rem;
+
+  /* Color Palette - Light Mode Default */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.75);
+  --bg-card-hover: rgba(255, 255, 255, 0.9);
+  --bg-pill: rgba(241, 245, 249, 0.8);
+  --bg-pill-active: #2563eb;
+  
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-inverse: #ffffff;
+
+  --border-color: rgba(226, 232, 240, 0.8);
+  --border-hover: rgba(203, 213, 225, 1);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.07), 0 0 15px rgba(0, 0, 0, 0.03);
+
+  /* Aurora Gradient Blob Colors (Light Mode - Vivid & High Contrast) */
+  --aurora-blob-1: rgba(37, 99, 235, 0.55);   /* Vibrant Royal Blue */
+  --aurora-blob-2: rgba(147, 51, 234, 0.5);   /* Electric Purple */
+  --aurora-blob-3: rgba(13, 148, 136, 0.45);  /* Bright Teal */
+  --aurora-blob-4: rgba(236, 72, 153, 0.4);   /* Hot Pink */
+  --spotlight-color: rgba(59, 130, 246, 0.22);
+
+  /* Brand Accents */
+  --accent-blue: #2563eb;
+  --accent-blue-light: #3b82f6;
+  --accent-purple: #8b5cf6;
+  --accent-teal: #0d9488;
+  --accent-green-badge: #10b981;
+
+  /* Layout & Spacing */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  /* Spacing Scale - 4px base unit (Apple/Linear inspired) */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  
+  /* Glass Card Properties - Standardized */
+  --glass-card-padding: var(--space-8);
+  --glass-card-border-radius: var(--radius-lg);
+  --glass-card-blur: var(--backdrop-blur);
+  
+  /* Title Sizes - Consistent hierarchy */
+  --title-size-xl: 3.5rem;
+  --title-size-lg: 2.5rem;
+  --title-size-md: 2rem;
+  --title-size-sm: 1.5rem;
+  
+  /* Subtitle/Text Sizes */
+  --text-size-xl: 1.5rem;
+  --text-size-lg: 1.25rem;
+  --text-size-md: 1rem;
+  --text-size-sm: 0.875rem;
+  --text-size-xs: 0.75rem;
+  
+  /* Consistent Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  /* Consistent Animations */
+  --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Component Heights */
+  --button-height: 44px;
+  --pill-height: 36px;
+  
+  /* Breakpoints */
+  --breakpoint-mobile: 640px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-laptop: 1024px;
+  --breakpoint-desktop: 1200px;
+  
+  /* Typography Scaling */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3rem;
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --backdrop-blur: blur(16px);
+}
+
+/* Dark Mode Tokens */
+[data-theme='dark'] {
+  --bg-primary: #090d16;
+  --bg-secondary: #111827;
+  --bg-card: rgba(17, 24, 39, 0.7);
+  --bg-card-hover: rgba(31, 41, 55, 0.85);
+  --bg-pill: rgba(31, 41, 55, 0.7);
+  --bg-pill-active: #3b82f6;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-inverse: #0f172a;
+
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.18);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);
+
+  /* Aurora Gradient Blob Colors (Dark Mode - Richer Glow) */
+  --aurora-blob-1: rgba(59, 130, 246, 0.65);  /* Electric Blue */
+  --aurora-blob-2: rgba(147, 51, 234, 0.55); /* Vibrant Purple */
+  --aurora-blob-3: rgba(20, 184, 166, 0.5);  /* Emerald Teal */
+  --aurora-blob-4: rgba(244, 63, 94, 0.45);  /* Rose Pink */
+  --spotlight-color: rgba(96, 165, 250, 0.35);
+
+  --accent-blue: #3b82f6;
+  --accent-blue-light: #60a5fa;
+  --accent-purple: #a855f7;
+  --accent-teal: #14b8a6;
+}

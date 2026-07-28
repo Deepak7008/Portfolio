@@ -1,0 +1,120 @@
+/* Contact Card - Standardized */
+.contact-card {
+  padding: var(--space-10);
+  max-width: 800px;
+  width: 100%;
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-8);
+}
+
+.contact-title {
+  font-size: var(--title-size-lg);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.contact-handle {
+  font-size: var(--text-size-sm);
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.contact-email-link {
+  display: inline-block;
+  font-size: var(--text-size-xl);
+  font-weight: 600;
+  color: var(--accent-blue);
+  margin-bottom: var(--space-8);
+  transition: all var(--transition-fast);
+}
+
+.contact-email-link:hover {
+  color: var(--accent-blue-light);
+  transform: translateY(-1px);
+}
+
+.contact-social-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.social-pill-blue {
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  background: var(--accent-blue);
+  color: #ffffff;
+  font-size: var(--text-size-sm);
+  font-weight: 600;
+  transition: all var(--transition-normal) var(--transition-smooth);
+  height: var(--button-height);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-pill-blue:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
+  background: var(--accent-blue-light);
+}
+
+.contact-note-card {
+  padding: var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--glass-card-border-radius);
+  color: var(--text-secondary);
+  font-size: var(--text-size-md);
+  line-height: 1.6;
+  max-width: 800px;
+  width: 100%;
+  margin-top: var(--space-8);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .contact-card {
+    padding: var(--space-6);
+  }
+  
+  .contact-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+  }
+  
+  .contact-title {
+    font-size: var(--title-size-md);
+  }
+  
+  .contact-email-link {
+    font-size: var(--text-size-lg);
+    margin-bottom: var(--space-6);
+  }
+  
+  .social-pill-blue {
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--text-size-sm);
+    height: 40px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .contact-card {
+    padding: var(--space-8);
+  }
+  
+  .contact-title {
+    font-size: 2rem;
+  }
+}
