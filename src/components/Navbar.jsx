@@ -9,8 +9,8 @@ export const Navbar = ({ onAvatarClick }) => {
   return (
     <header className="top-navbar">
       <div className="top-navbar-left">
-        <a 
-          href="/sample-resume.pdf" 
+        <a
+          href="/Deepak_Pani_Resume.pdf"
           className="resume-btn"
           title="View Resume"
           target="_blank"
