@@ -1,43 +1,93 @@
-import React, { useState } from 'react';
-import { ProjectModal } from '../components/ProjectModal';
-import './Projects.css';
+import React, { useState } from "react";
+import { ProjectModal } from "../components/ProjectModal";
+import "./Projects.css";
 
 const sampleProjects = [
   {
-    id: 'solveiq',
-    title: 'SolveIQ',
-    category: 'AI in Mathematics',
-    description: 'An AI-powered math copilot that solves complex geometry and algebra problems by analyzing canvas drawings. Built to help students visualize and solve problems interactively in real-time.',
-    technologies: ['FastAPI', 'Groq Llama 3', 'Canvas API', 'Next.js', 'Tailwind CSS', 'TypeScript', 'MathJax'],
-    demoUrl: 'https://solveiq.demo.app',
-    githubUrl: 'https://github.com/example/solveiq',
-    bannerImg: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=400:800:1200&q=80',
-    bgGradient: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)',
-    imageId: '1635070041078-e363dbe005cb'
+    id: "chatbot",
+    category: "Generative AI",
+    title: "Agentic Chatbot with Robust Eval Framework",
+
+    description:
+      "A production-ready AI chatbot built with routing, guardrails, LLM-as-a-Judge evaluation, prompt engineering and automated evaluation pipelines. The application demonstrates enterprise-grade conversational AI with measurable quality metrics.",
+
+    technologies: [
+      "Multi-Intent Routing",
+      "LLM-as-a-Judge",
+      "Guardrails",
+      "Prompt Engineering",
+      "Groq Llama 3",
+      "Streamlit",
+      "Evaluation Framework"
+    ],
+
+    demoUrl: "https://roxor-chatbot-eval.streamlit.app/",
+    githubUrl: "https://github.com/Deepak7008/AI-Chatbot-Eval",
+
+    bannerImg: "/p1image.png",
+
+    gallery: [
+      "/p1image2.png",
+      "/p1image3.png",
+      "/p1image4.png"
+    ]
   },
+
   {
-    id: 'agentflow',
-    title: 'AgentFlow',
-    category: 'AI in Research',
-    description: 'Autonomous multi-agent orchestration framework that executes parallel web research, synthesizes context, and delivers decision-ready market analysis reports.',
-    technologies: ['Python', 'LangChain', 'OpenAI API', 'FastAPI', 'React', 'Vector Databases'],
-    demoUrl: 'https://agentflow.demo.app',
-    githubUrl: 'https://github.com/example/agentflow',
-    bannerImg: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400:800:1200&q=80',
-    bgGradient: 'linear-gradient(135deg, #064e3b 0%, #065f46 100%)',
-    imageId: '1618005182384-a83a8bd57fbe'
+    id: "agentflow",
+    category: "Retail",
+
+    title: "Stratos",
+
+    description:
+      "A premium, mobile-first application for Planners and Executives to review and track daily assortment planning activities.",
+
+    technologies: [
+      "Retail Analytics",
+      "Assortment Planning",
+      "Charts",
+      "Vector Database"
+    ],
+
+    demoUrl: "https://assortment-plan.vercel.app/",
+    githubUrl: "https://github.com/Deepak7008/AssortmentPlan",
+
+    bannerImg: "/p2image4.png",
+
+    gallery: [
+      "/p2image2.png",
+      "/p2image.png",
+      "/p2image3.png",
+    ]
   },
+
   {
-    id: 'smartaqi',
-    title: 'SmartAQI',
-    category: 'Environmental AI',
-    description: 'AI-powered air quality monitoring and telemetry decision support system designed to track environmental pollutants (PM2.5, PM10, CO) across Indian cities with real-time Telegram bot alerts.',
-    technologies: ['FastAPI', 'Scikit-Learn', 'XGBoost', 'PostgreSQL', 'Supabase', 'Python'],
-    demoUrl: 'https://smartaqi.demo.app',
-    githubUrl: 'https://github.com/example/smartaqi',
-    bannerImg: 'https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=400:800:1200&q=80',
-    bgGradient: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
-    imageId: '1534088568595-a066f410bcda'
+    id: "smartaqi",
+
+    category: "CRM",
+
+    title: "SureSupply",
+
+    description:
+      "SureSupply is a comprehensive supply chain management solution designed to streamline the process of requesting quotes from multiple suppliers, managing company information, and tracking RFQ statuses in real-time.",
+
+    technologies: [
+      "Dashboard",
+      "Item Tracking",
+      "Client Management",
+      "Status Tracking",
+      "RFQ Details"
+    ],
+
+    demoUrl: "https://sure-supply-seven.vercel.app/",
+    githubUrl: "https://github.com/Deepak7008/SureSupply",
+
+    bannerImg: "/p3image.png",
+
+    gallery: [
+      "/p3image2.png",
+      "/p3image1.png"
+    ]
   }
 ];
 
@@ -46,39 +96,80 @@ export const Projects = () => {
 
   return (
     <section id="projects" className="page-section">
+
       <div className="container">
+
         <div className="section-header text-center">
-          <h2 className="title-lg">My Projects</h2>
-          <p className="text-md text-secondary mt-2">Interactive AI applications and research frameworks</p>
+
+          <h2 className="title-lg">
+            My Projects
+          </h2>
+
+          <p className="projects-subtitle">
+            AI applications built for learning and experimentation.
+          </p>
+
         </div>
 
         <div className="projects-grid">
+
           {sampleProjects.map((project) => (
+
             <div
               key={project.id}
-              className="project-card hover-lift"
+              className="project-card"
               onClick={() => setSelectedProject(project)}
-              style={{ background: project.bgGradient }}
             >
-              <div className="project-card-gradient" />
-              <div className="project-card-content">
-                <div className="project-card-category">{project.category}</div>
-                <h3 className="project-card-title">{project.title}</h3>
-                <div className="flex items-center gap-2 mt.4">
-                  <span className="text-xs opacity-80">Click to view details</span>
-                </div>
+
+              <div className="project-image-wrapper">
+
+                <img
+                  src={project.bannerImg}
+                  alt={project.title}
+                  className="project-image"
+                />
+
               </div>
+
+              <div className="project-card-content">
+
+                <div className="project-card-category">
+
+                  {project.category}
+
+                </div>
+
+                <h3 className="project-card-title">
+
+                  {project.title}
+
+                </h3>
+
+                <div className="project-click-text">
+
+                  Click to view details →
+
+                </div>
+
+              </div>
+
             </div>
+
           ))}
+
         </div>
 
-        {selectedProject && (
-          <ProjectModal 
-            project={selectedProject} 
-            onClose={() => setSelectedProject(null)} 
-          />
-        )}
       </div>
+
+      {selectedProject && (
+
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+
+      )}
+
     </section>
   );
 };

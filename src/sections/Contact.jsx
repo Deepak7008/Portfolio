@@ -18,7 +18,7 @@ export const Contact = () => {
         <div className="glass-card-standard contact-card">
           <div className="contact-header">
             <h2 className="contact-title">Contacts</h2>
-            <span className="contact-handle">+91-8338904620</span>
+
           </div>
 
           <a
@@ -44,7 +44,8 @@ export const Contact = () => {
         </div>
 
         <div className="contact-note-card glass-card-standard mt-12 text-center">
-          You can reach me through the contact info above! Feel free to hit me up anytime—I'd be happy to chat about Supply Chain, Emerging Tech, Sports.
+          You can reach me through the contact info above!
+          <p>Feel free to hit me up anytime—I'd be happy to chat about Supply Chain, Emerging Tech or Sports.</p>
         </div>
       </div>
     </section>

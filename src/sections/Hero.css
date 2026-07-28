@@ -1,5 +1,5 @@
 .hero-card {
-  max-width: 780px;
+  max-width: 900px;
   width: 100%;
   padding: 3rem 2.5rem;
   display: flex;
@@ -16,6 +16,13 @@
   padding: 4px;
   background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple), var(--accent-teal));
   box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .hero-greeting {
@@ -49,7 +56,7 @@
 .hero-bio {
   font-size: 1.15rem;
   color: var(--text-secondary);
-  max-width: 620px;
+  max-width: 720px;
   line-height: 1.7;
   text-align: center;
 }
@@ -77,16 +84,16 @@
   .hero-card {
     padding: 2rem 1.5rem;
   }
-  
+
   .hero-name {
     font-size: 2.5rem;
   }
-  
+
   .hero-bio {
     font-size: 1rem;
     padding: 0 0.5rem;
   }
-  
+
   .hero-avatar-large {
     width: 90px;
     height: 90px;
@@ -97,11 +104,11 @@
   .hero-card {
     padding: 2.5rem 2rem;
   }
-  
+
   .hero-name {
     font-size: 2.8rem;
   }
-  
+
   .hero-bio {
     font-size: 1.1rem;
   }

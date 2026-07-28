@@ -1,16 +1,101 @@
-# React + Vite
+# 🚀 Deepak Pani | Product Manager Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, responsive portfolio showcasing my experience as a **Product Manager / Functional Consultant** with expertise in Retail Planning, AI-enabled products, and SaaS implementations.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+(https://deepakpani2026.vercel.app/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 👨‍💻 About Me
 
-## Expanding the Oxlint configuration
+I'm a Product Manager with 4+ years of experience working on enterprise SaaS products in the Retail Planning domain.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+My expertise includes:
+
+- Product Strategy & Roadmapping
+- Requirements Gathering
+- Stakeholder Management
+- Retail Merchandise Planning
+- AI & GenAI Products
+- SQL & Python
+- Data Analysis
+- Agile & Scrum
+
+---
+
+## ✨ Features
+
+- Modern glassmorphism UI
+- Responsive design
+- Animated transitions
+- Interactive project showcase
+- Expandable experience timeline
+- Skills section
+- Contact section
+- Dark/Light theme support
+
+---
+
+## 🛠️ Built With
+
+- React
+- Vite
+- JavaScript
+- CSS
+- Lucide React
+- Git
+- GitHub
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+│
+├── components/
+├── sections/
+├── context/
+├── styles/
+├── assets/
+└── App.jsx
+```
+
+---
+
+## 📸 Preview
+
+(Add screenshots after deployment)
+
+---
+
+## 🚀 Running Locally
+
+Clone the repository
+
+```bash
+git clone https://github.com/yourusername/portfolio.git
+```
+
+Go into the project
+
+```bash
+cd portfolio
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npm run dev
+```
+
+---
+
