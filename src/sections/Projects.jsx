@@ -21,7 +21,7 @@ const sampleProjects = [
       "Evaluation Framework"
     ],
 
-    demoUrl: "https://roxor-chatbot-eval.streamlit.app/",
+    demoUrl: "https://7008-chatbot-eval.streamlit.app",
     githubUrl: "https://github.com/Deepak7008/AI-Chatbot-Eval",
 
     bannerImg: "/p1image.png",
