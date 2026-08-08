@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   pointer-events: none;
   z-index: 0;
@@ -30,7 +30,7 @@
 .aurora-blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(65px);
+  filter: blur(75px);
   will-change: transform;
   transition: transform 0.25s cubic-bezier(0.1, 0.9, 0.2, 1);
   z-index: 0;
@@ -38,40 +38,32 @@
 
 /* Individual Blobs with varied positions & colors */
 .blob-1 {
-  width: 50vw;
-  height: 50vw;
-  max-width: 650px;
-  max-height: 650px;
+  width: clamp(300px, 50vw, 900px);
+  height: clamp(300px, 50vw, 900px);
   top: -15%;
   left: -10%;
   background: var(--aurora-blob-1);
 }
 
 .blob-2 {
-  width: 45vw;
-  height: 45vw;
-  max-width: 600px;
-  max-height: 600px;
+  width: clamp(280px, 45vw, 850px);
+  height: clamp(280px, 45vw, 850px);
   top: 15%;
   right: -10%;
   background: var(--aurora-blob-2);
 }
 
 .blob-3 {
-  width: 40vw;
-  height: 40vw;
-  max-width: 520px;
-  max-height: 520px;
+  width: clamp(250px, 40vw, 750px);
+  height: clamp(250px, 40vw, 750px);
   bottom: -15%;
   left: 15%;
   background: var(--aurora-blob-3);
 }
 
 .blob-4 {
-  width: 35vw;
-  height: 35vw;
-  max-width: 450px;
-  max-height: 450px;
+  width: clamp(220px, 35vw, 700px);
+  height: clamp(220px, 35vw, 700px);
   bottom: 20%;
   right: 10%;
   background: var(--aurora-blob-4);

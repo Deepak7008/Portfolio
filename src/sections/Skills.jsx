@@ -8,11 +8,11 @@ const skillData = [
   },
   {
     category: 'Product',
-    skills: ['PRD Authoring', 'Functional Specification', 'User story crafting', 'Wireframing', 'Stakeholder Management', 'Jira']
+    skills: ['PRD Authoring', 'Functional Specification', 'User Story crafting', 'Wireframing', 'Stakeholder Management', 'Jira']
   },
   {
     category: 'Technical',
-    skills: ['Python', 'SQL', 'PowerBI', 'Miro', 'GenAI', 'Eval Frameworks', 'Agile Methodologies']
+    skills: ['Python', 'SQL', 'PowerBI', 'Jira', 'Miro', 'GenAI', 'Evaluation Frameworks', 'RAG', 'Agentic Systems']
   },
 ];
 
@@ -22,7 +22,7 @@ export const Skills = () => {
       <div className="container">
         <div className="section-header text-center">
           <h2 className="title-lg">Skills & Expertise</h2>
-          <p className="text-md text-secondary mt-2">Functional and Technical Capabilities</p>
+          <p className="text-md text-secondary mt-2">functional and technical capabilities</p>
         </div>
 
         <div className="max-w-6xl mx-auto">

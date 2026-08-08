@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Briefcase, FileText, Code2, Mail } from 'lucide-react';
+import { User, Briefcase, FileText, Code2, GraduationCap, Mail } from 'lucide-react';
 import './SectionNav.css';
 
 export const SectionNav = ({ activeSection, setActiveSection }) => {
@@ -8,6 +8,7 @@ export const SectionNav = ({ activeSection, setActiveSection }) => {
     { id: 'projects', label: 'Projects', icon: Briefcase },
     { id: 'experience', label: 'Experience', icon: FileText },
     { id: 'skills', label: 'Skills', icon: Code2 },
+    { id: 'education', label: 'Education', icon: GraduationCap },
     { id: 'contact', label: 'Contact', icon: Mail },
   ];
 

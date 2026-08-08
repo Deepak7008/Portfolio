@@ -1,11 +1,12 @@
 .experience-card {
-  padding: var(--space-8);
+  padding: clamp(1.2rem, 3vw, 2rem);
   border-radius: var(--glass-card-border-radius);
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
   transition: all .3s ease;
   margin-bottom: var(--space-4);
+  box-sizing: border-box;
 }
 
 .experience-card:hover {
@@ -17,9 +18,9 @@
 .experience-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   cursor: pointer;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .experience-header-left {
@@ -32,12 +33,11 @@
   align-items: center;
   margin-bottom: .45rem;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .experience-scroll {
-  max-height: 70vh;
-  overflow-y: auto;
-  padding-right: 10px;
+  width: 100%;
 }
 
 .exp-company {
@@ -50,11 +50,10 @@
   color: var(--text-secondary);
   font-size: .95rem;
   font-weight: 600;
-  white-space: nowrap;
 }
 
 .exp-role {
-  font-size: 1.8rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   font-weight: 700;
   color: var(--text-primary);
   margin: 0;
@@ -62,9 +61,9 @@
 }
 
 .expand-icon {
-  margin-top: .35rem;
   color: var(--text-muted);
-  transition: .3s;
+  transition: transform .3s ease, color .3s ease;
+  flex-shrink: 0;
 }
 
 .expand-icon.open {
@@ -73,7 +72,7 @@
 }
 
 .experience-content {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   animation: fadeSlide .35s ease;
 }
 
@@ -82,22 +81,22 @@
   font-size: .8rem;
   letter-spacing: .08em;
   color: var(--text-muted);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .tech-list {
   display: flex;
   flex-wrap: wrap;
-  gap: .75rem;
-  margin-bottom: 2rem;
+  gap: .5rem;
+  margin-bottom: 1.5rem;
 }
 
 .tech-pill {
-  padding: .45rem .9rem;
+  padding: .35rem .8rem;
   border-radius: 999px;
   background: var(--bg-pill);
   border: 1px solid var(--border-color);
-  font-size: .85rem;
+  font-size: .82rem;
   transition: .25s;
 }
 
@@ -116,8 +115,9 @@
   position: relative;
   padding-left: 1.4rem;
   margin-bottom: 1rem;
-  line-height: 1.8;
+  line-height: 1.7;
   color: var(--text-secondary);
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
 }
 
 .exp-bullets li::before {
@@ -128,7 +128,7 @@
   background: var(--accent-blue);
   position: absolute;
   left: 0;
-  top: .75rem;
+  top: .65rem;
 }
 
 @keyframes fadeSlide {
@@ -143,25 +143,10 @@
   }
 }
 
-@media(max-width:768px) {
-
-  .experience-header {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
+@media(max-width:640px) {
   .experience-top-row {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.25rem;
   }
-
-  .exp-role {
-    font-size: 1.45rem;
-  }
-
-  .expand-icon {
-    align-self: flex-end;
-    margin-top: -2.5rem;
-  }
-
 }

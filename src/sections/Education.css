@@ -1,11 +1,11 @@
-.skills-grid {
+.education-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: var(--space-6);
   margin-top: var(--space-8);
 }
 
-.skill-category-group {
+.education-card {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
@@ -21,37 +21,63 @@
   box-sizing: border-box;
 }
 
-.skill-category-group:hover {
+.education-card:hover {
   border-color: var(--accent-blue);
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
 
-.skill-category-header {
+.education-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.education-institution {
+  font-size: var(--title-size-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.education-duration {
+  font-size: var(--text-size-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.education-degree-row {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
-  font-size: var(--title-size-sm);
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: var(--space-3);
-}
-
-.code-prefix {
-  color: var(--text-muted);
-  font-family: monospace;
-  font-weight: 700;
-  font-size: var(--text-size-sm);
-}
-
-.skill-pills-wrap {
-  display: flex;
-  flex-wrap: wrap;
   gap: var(--space-2);
 }
 
-.skill-pill {
-  padding: var(--space-2) var(--space-3);
+.education-icon {
+  color: var(--accent-blue);
+  flex-shrink: 0;
+}
+
+.education-degree {
+  font-size: var(--text-size-md);
+  font-weight: 500;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.education-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+.education-pill {
+  padding: var(--space-1) var(--space-3);
   border-radius: var(--radius-full);
   background: var(--bg-pill);
   border: 1px solid var(--border-color);
@@ -64,16 +90,15 @@
   align-items: center;
 }
 
-.skill-pill:hover {
+.education-pill:hover {
   background: var(--bg-card-hover);
   border-color: var(--accent-blue);
   color: var(--accent-blue);
   transform: translateY(-2px);
 }
 
-/* Responsive adjustments */
 @media (max-width: 640px) {
-  .skill-category-group {
+  .education-card {
     padding: var(--space-4);
     min-height: 120px;
   }

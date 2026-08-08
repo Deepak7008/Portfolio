@@ -440,11 +440,16 @@ button {
 /* Page Section Layout - New Consistent Spacing */
 .page-section {
   width: 100%;
-  min-height: var(--viewport-available-height);
+  min-height: calc(100vh - var(--navbar-height));
   display: flex;
   flex-direction: column;
-  padding-top: var(--section-top-spacing);
-  padding-bottom: var(--section-bottom-spacing);
+  justify-content: center;
+  align-items: center;
+  padding-top: calc(var(--navbar-height) + 1.5rem);
+  padding-bottom: calc(var(--section-nav-height) + 2rem);
+  box-sizing: border-box;
+  scroll-margin-top: var(--navbar-height);
+  scroll-snap-align: start;
 }
 
 .section-header {
@@ -791,15 +796,8 @@ button {
 /* Mobile (default) */
 @media (max-width: 639px) {
   :root {
-    --section-padding: 1.5rem;
+    --section-padding: 1rem;
     --container-padding: 1rem;
-  }
-
-  .page-section {
-    height: calc(100vh - 64px - 90px);
-    overflow-y: auto;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
   }
 
   .text-4xl {
