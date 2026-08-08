@@ -30,9 +30,8 @@ export const Hero = () => {
           </div>
 
           <p className="hero-bio">
-            Product Manager specializing in AI, Retail Planning, and Supply Chain
-            solutions with experience building enterprise SaaS products, GenAI
-            features, and data-driven decision systems.
+            Product Manager exploring the intersection of AI, Retail, and Technology.<br />
+            Building products, solving problems, and learning along the way.
           </p>
 
           <div className="hero-tags">

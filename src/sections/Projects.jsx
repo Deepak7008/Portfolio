@@ -106,7 +106,7 @@ export const Projects = () => {
           </h2>
 
           <p className="projects-subtitle">
-            AI applications built for learning and experimentation.
+            applications built for learning
           </p>
 
         </div>

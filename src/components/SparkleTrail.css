@@ -1,0 +1,45 @@
+.sparkle-trail {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 80;
+  overflow: hidden;
+}
+
+.sparkle {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 1px currentColor;
+  opacity: 0;
+  animation-name: sparkle-twinkle;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sparkle-twinkle {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1.15);
+  }
+
+  60% {
+    opacity: 0.9;
+    transform: translate(0, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(var(--drift), var(--rise)) scale(0.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sparkle-trail {
+    display: none;
+  }
+}

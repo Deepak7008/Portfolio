@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import { AuroraBackground } from './components/AuroraBackground';
+import { SparkleTrail } from './components/SparkleTrail';
 import { Navbar } from './components/Navbar';
 import { SectionNav } from './components/SectionNav';
 import { Hero } from './sections/Hero';
 import { Projects } from './sections/Projects';
 import { Experience } from './sections/Experience';
 import { Skills } from './sections/Skills';
+import { Education } from './sections/Education';
 import { Contact } from './sections/Contact';
 
-const SECTIONS = ['me', 'projects', 'experience', 'skills', 'contact'];
+const SECTIONS = ['me', 'projects', 'experience', 'skills', 'education', 'contact'];
 
 export function App() {
   const [activeSection, setActiveSection] = useState('me');
@@ -50,6 +52,7 @@ export function App() {
   return (
     <ThemeProvider>
       <AuroraBackground />
+      <SparkleTrail />
       <div className="relative z-10 w-full min-h-screen flex flex-col">
         <Navbar onAvatarClick={() => handleNavClick('me')} />
         <main className="w-full flex-1">
@@ -57,6 +60,7 @@ export function App() {
           <Projects />
           <Experience />
           <Skills />
+          <Education />
           <Contact />
         </main>
         <SectionNav
