@@ -43,9 +43,9 @@
 }
 
 .top-navbar-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .memoji-avatar-top {
@@ -87,4 +87,25 @@
   background: var(--bg-card-hover);
   border-color: var(--accent-blue);
   color: var(--accent-blue);
+}
+
+@media (max-width: 480px) {
+  .top-navbar {
+    padding: 0 0.85rem;
+  }
+
+  .resume-btn {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.8rem;
+  }
+
+  .memoji-avatar-top {
+    width: 36px;
+    height: 36px;
+  }
+
+  .theme-toggle-btn {
+    width: 36px;
+    height: 36px;
+  }
 }

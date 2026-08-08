@@ -102,9 +102,8 @@ export const Experience = ({ disableSectionScroll }) => {
           Professional Experience
         </h2>
 
-        {/* NEW SCROLL WRAPPER */}
-        <div className="experience-scroll"
-          onWheel={(e) => e.stopPropagation()}>
+        {/* EXPERIENCE WRAPPER */}
+        <div className="experience-scroll">
 
           <div className="max-w-4xl mx-auto">
 

@@ -13,102 +13,57 @@ const SECTIONS = ['me', 'projects', 'experience', 'skills', 'contact'];
 
 export function App() {
   const [activeSection, setActiveSection] = useState('me');
-  const lastScrollTimeRef = useRef(0);
 
   useEffect(() => {
-    const handleWheel = (e) => {
-
-      // Ignore scrolling when a modal is open
-      if (document.querySelector('.modal-overlay')) return;
-
-      const now = Date.now();
-
-      // Prevent very fast section switching
-      if (now - lastScrollTimeRef.current < 450) return;
-
-      // Ignore tiny touchpad movements
-      if (Math.abs(e.deltaY) < 15) return;
-
-      const currentIndex = SECTIONS.indexOf(activeSection);
-
-      if (e.deltaY > 0 && currentIndex < SECTIONS.length - 1) {
-        lastScrollTimeRef.current = now;
-        setActiveSection(SECTIONS[currentIndex + 1]);
-      }
-
-      if (e.deltaY < 0 && currentIndex > 0) {
-        lastScrollTimeRef.current = now;
-        setActiveSection(SECTIONS[currentIndex - 1]);
-      }
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -40% 0px',
+      threshold: 0.2,
     };
 
-    window.addEventListener('wheel', handleWheel, { passive: true });
-
-    return () => {
-      window.removeEventListener('wheel', handleWheel);
+    const handleIntersect = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
     };
 
-  }, [activeSection]);
+    const observer = new IntersectionObserver(handleIntersect, observerOptions);
 
-  const handleAvatarClick = () => {
-    setActiveSection('me');
-  };
+    SECTIONS.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
 
-  const renderActiveSection = () => {
+    return () => observer.disconnect();
+  }, []);
 
-    switch (activeSection) {
-
-      case 'me':
-        return <Hero />;
-
-      case 'projects':
-        return <Projects />;
-
-      case 'experience':
-        return <Experience />;
-
-      case 'skills':
-        return <Skills />;
-
-      case 'contact':
-        return <Contact />;
-
-      default:
-        return <Hero />;
+  const handleNavClick = (id) => {
+    setActiveSection(id);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
     <ThemeProvider>
-
       <AuroraBackground />
-
-      <div className="relative z-10">
-
-        <Navbar onAvatarClick={handleAvatarClick} />
-
-        <main className="page-section">
-
-          <div className="container">
-
-            <div
-              key={activeSection}
-              className="section-fade-in w-full"
-            >
-              {renderActiveSection()}
-            </div>
-
-          </div>
-
+      <div className="relative z-10 w-full min-h-screen flex flex-col">
+        <Navbar onAvatarClick={() => handleNavClick('me')} />
+        <main className="w-full flex-1">
+          <Hero />
+          <Projects />
+          <Experience />
+          <Skills />
+          <Contact />
         </main>
-
         <SectionNav
           activeSection={activeSection}
-          setActiveSection={setActiveSection}
+          setActiveSection={handleNavClick}
         />
-
       </div>
-
     </ThemeProvider>
   );
 }

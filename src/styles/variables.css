@@ -11,8 +11,8 @@
   --section-bottom-spacing: 32px;   /* Content to bottom nav area */
   --modal-vertical-padding: 48px;   /* Equal top/bottom padding for modals */
   --viewport-available-height: calc(100vh - var(--navbar-height) - var(--section-nav-height));
-  --container-max-width: 1200px;
-  --container-padding: 1rem;
+  --container-max-width: 1400px;
+  --container-padding: 1.5rem;
 
   /* Color Palette - Light Mode Default */
   --bg-primary: #f8fafc;
@@ -70,15 +70,15 @@
   --glass-card-blur: var(--backdrop-blur);
   
   /* Title Sizes - Consistent hierarchy */
-  --title-size-xl: 3.5rem;
-  --title-size-lg: 2.5rem;
-  --title-size-md: 2rem;
-  --title-size-sm: 1.5rem;
+  --title-size-xl: clamp(2.5rem, 5vw, 4rem);
+  --title-size-lg: clamp(1.8rem, 3.5vw, 3rem);
+  --title-size-md: clamp(1.4rem, 2.5vw, 2.2rem);
+  --title-size-sm: clamp(1.1rem, 1.8vw, 1.5rem);
   
   /* Subtitle/Text Sizes */
-  --text-size-xl: 1.5rem;
-  --text-size-lg: 1.25rem;
-  --text-size-md: 1rem;
+  --text-size-xl: clamp(1.2rem, 2vw, 1.5rem);
+  --text-size-lg: clamp(1.05rem, 1.5vw, 1.25rem);
+  --text-size-md: clamp(0.95rem, 1.2vw, 1.05rem);
   --text-size-sm: 0.875rem;
   --text-size-xs: 0.75rem;
   
