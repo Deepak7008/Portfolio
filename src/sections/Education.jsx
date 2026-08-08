@@ -17,7 +17,7 @@ const education = [
   {
     id: 'bachelors',
     institution: 'Indira Gandhi Institute of Technology, Sarang',
-    degree: 'Bachelor of Technology',
+    degree: 'B.Tech, Electrical Engineering',
     duration: '2013 – 2017',
     highlights: [
       'CGPA: 7.7 / 10',
